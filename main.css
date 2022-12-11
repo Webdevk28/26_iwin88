@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@500&family=Dancing+Script:wght@500&family=Darker+Grotesque:wght@500&family=EB+Garamond&family=Kenia&family=Montserrat:wght@500&family=Poppins&family=Quicksand:wght@500&family=Tinos&family=Ubuntu&family=Zilla+Slab:wght@500&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    background: url("./images/bannerr.png") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;   
+}
+.main{
+  font-family: 'Montserrat', sans-serif;
+}
+/* scrol */
+body::-webkit-scrollbar {
+    width: 10px;
+  }
+  body::-webkit-scrollbar-track {
+    background-color: darkgray;
+  }
+  body::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, blue, #f9f871);
+    border-radius: 10px;
+  }
+
+  /* remove the below if you don't want smooth scrolling */
+  html,
+  body {
+    scroll-behavior: smooth;
+  }
+  .top {
+    --offset: 50px; 
+    position: fixed;
+    z-index: 10;
+    bottom: 10px;      
+    margin-left:10px; 
+    place-self: end;
+    margin-top: calc(100vh + var(--offset));
+  }
+  .top:before {
+    content:"";
+    position:absolute;
+    /* inset:30%; */
+    transform:translateY(20%) rotate(-45deg);
+  }
+
+  .content-item{
+    background-image: linear-gradient(to right,#ecac18,#fd6d6d,#ecac18);
+    border: 1px solid #fff;
+    /* box-shadow: 0 0 5px #fff, 0 0 13px #e5bb58, 0 0 21px #e5bb58, 0 0 28px #e5bb58; */
+  }
+
+/* card */
+  .cards {
+    --spacing: 20px;
+    --columns: 1;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(-1 * var(--spacing));
+}
+.card {
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    width: calc(calc(100% / var(--columns)) - var(--spacing));
+    margin-left: var(--spacing);
+    margin-bottom: var(--spacing);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.card-image {
+    /* height: 200PX; */
+    width: 100%;
+    /* object-fit: cover; */
+    flex-shrink: 0;
+    margin-top: 10px;
+}
+.card-top {
+    padding: 20px;
+}
+.card-title {
+    /* font-weight: 500; */
+    margin-bottom: 25px;
+    word-break: break-all;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+}
+.card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* responsive */
+@media (min-width: 320px) and (max-width: 480px) {
+    .whole{
+      overflow: hidden;
+    }
+    .head-item{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .head .logo{
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+    }
+    .head .logo-img{
+      width: 120px;
+    }
+    .head .head-menu,
+    .head .flag{
+      display: none;
+    }
+    .head .close-menu{
+      display: block;
+    }
+    /* content */
+    .main .content-list{
+      display: flex;
+      flex-direction: column;
+    }
+    .main .content-item{
+      width: 100%;
+      margin: 10px 0;
+      padding: 8px;
+      font-size: 12px;
+    }
+    /* card */
+    .main .cards{
+      width: 100%;
+    }
+    .main .card{
+      display: flex;
+      flex-direction: column;
+    }
+    .main .card-content2{
+      width: 100%;
+      display: flex ;
+      flex-direction: column;
+    }
+    .main .card-content{
+      width: 100%;
+    }
+    /* author */
+    .main .author-item{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 15px;
+    }
+    .main .author-left,
+    .main .author-right,
+    .main .author-center{
+      width: 100%;
+    }
+    /* title */
+    .main .title-item{
+      width: 100%;
+    }
+    /* footer */
+    .footer{
+      display: flex;
+      flex-direction: column!important;
+    }
+    .footer .footer-item{
+      width: 100%;
+      margin-top: 10px;
+    }
+    .footer .icon-link{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      margin-top: 10px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .whole{
+    overflow: hidden;
+  }
+  .head-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .head .logo{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .head .logo-img{
+    width: 120px;
+  }
+  .head .head-menu,
+  .head .flag{
+    display: none;
+  }
+  .head .close-menu{
+    display: block;
+  }
+  /* content */
+  .main .content-list{
+    display: flex;
+    flex-direction: row;
+  }
+  .main .content-item{
+    width: 100%;
+    margin: 10px 0;
+    padding: 8px;
+    font-size: 12px;
+  }
+  /* card */
+  .main .cards{
+    --columns: 2;
+  }
+  .main .cards{
+    width: 100%;
+  }
+  .main .card{
+    display: flex;
+    flex-direction: column;
+  }
+  .main .card-content2{
+    width: 100%;
+    display: flex ;
+    flex-direction: column;
+  }
+  .main .card-content{
+    width: 100%;
+  }
+  /* author */
+  .main .author-item{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+  }
+  .main .author-left,
+  .main .author-right,
+  .main .author-center{
+    width: 100%;
+  }
+  /* title */
+  .main .title-item{
+    width: 100%;
+  }
+  /* footer */
+  .footer{
+    display: flex;
+    flex-direction: column!important;
+  }
+  .footer .footer-item{
+    width: 100%;
+    margin-top: 10px;
+  }
+  .footer .icon-link{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1025px) {
+  .whole{
+    overflow: hidden;
+  }
+  /* content */
+  .main .content-list{
+    display: flex;
+    flex-direction: row;
+  }
+  .main .content-item{
+    width: 100%;
+    margin: 10px 0;
+    padding: 8px;
+    font-size: 12px;
+  }
+  /* card */
+  .main .cards{
+    --columns: 3;
+  }
+  .main .cards{
+    width: 100%;
+  }
+  .main .card{
+    display: flex;
+    flex-direction: column;
+  }
+  .main .card-content2{
+    width: 100%;
+    display: flex ;
+    flex-direction: column;
+  }
+  .main .card-content{
+    width: 100%;
+  }
+  /* author */
+  .main .author-item{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+  }
+  .main .author-left,
+  .main .author-right,
+  .main .author-center{
+    width: 100%;
+  }
+  /* title */
+  .main .title-item{
+    width: 100%;
+  }
+}
